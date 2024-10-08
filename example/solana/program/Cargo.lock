@@ -478,8 +478,8 @@ dependencies = [
  "bincode",
  "borsh 1.5.1",
  "eyre",
- "groth16-solana 0.1.0",
  "solana-program",
+ "sp1-solana",
 ]
 
 [[package]]
@@ -550,19 +550,6 @@ dependencies = [
  "num-bigint",
  "solana-bn254",
  "solana-program",
- "thiserror",
-]
-
-[[package]]
-name = "groth16-solana"
-version = "0.1.0"
-dependencies = [
- "ark-bn254",
- "ark-ff",
- "ark-serialize",
- "borsh 1.5.1",
- "groth16-solana 0.0.3",
- "solana-bn254",
  "thiserror",
 ]
 
@@ -1323,6 +1310,19 @@ version = "2.1.0"
 source = "git+https://github.com/anza-xyz/agave#ed51e70c2e6528f602ad4f8fde718f60d7da2d0c"
 dependencies = [
  "serde",
+]
+
+[[package]]
+name = "sp1-solana"
+version = "0.1.0"
+dependencies = [
+ "ark-bn254",
+ "ark-ff",
+ "ark-serialize",
+ "borsh 1.5.1",
+ "groth16-solana",
+ "solana-bn254",
+ "thiserror",
 ]
 
 [[package]]

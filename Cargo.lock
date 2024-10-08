@@ -1390,23 +1390,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "groth16-solana"
-version = "0.1.0"
-dependencies = [
- "ark-bn254",
- "ark-ff",
- "ark-serialize",
- "borsh 1.5.1",
- "groth16-solana 0.0.3",
- "hex",
- "num-bigint 0.4.6",
- "num-traits",
- "solana-bn254",
- "sp1-sdk",
- "thiserror",
-]
-
-[[package]]
 name = "group"
 version = "0.12.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3880,6 +3863,23 @@ dependencies = [
  "thiserror",
  "tracing",
  "vergen",
+]
+
+[[package]]
+name = "sp1-solana"
+version = "0.1.0"
+dependencies = [
+ "ark-bn254",
+ "ark-ff",
+ "ark-serialize",
+ "borsh 1.5.1",
+ "groth16-solana",
+ "hex",
+ "num-bigint 0.4.6",
+ "num-traits",
+ "solana-bn254",
+ "sp1-sdk",
+ "thiserror",
 ]
 
 [[package]]

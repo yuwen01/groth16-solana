@@ -1,5 +1,5 @@
-use groth16_solana::{verify_proof_fixture, SP1ProofFixture, GROTH16_VK_BYTES};
 use sp1_sdk::{utils, SP1ProofWithPublicValues};
+use sp1_solana::{verify_proof_fixture, SP1ProofFixture, GROTH16_VK_BYTES};
 
 fn main() {
     // Setup logging for the application.

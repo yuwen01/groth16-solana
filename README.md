@@ -1,12 +1,12 @@
-# `groth16-solana`
+# `sp1-solana`
 
-A Groth16 verifier implementation for Solana using BN254 precompiles. This crate verifies Groth16 proofs generated with SP1, leveraging Solana's BN254 precompiles for efficient cryptographic operations.
+This crate verifies Groth16 proofs generated with SP1, leveraging Solana's BN254 precompiles for cheap on-chain verification.
 
 > [!CAUTION]
 >
 > This repository is under active development and is not yet ready for production use.
 
-## Features
+## Overview
 
 - **Groth16 Proof Verification**: Implements the Groth16 protocol for zero-knowledge proof verification.
 - **Solana BN254 Precompiles**: Leverages Solana's native BN254 precompiles for optimized performance.
@@ -15,12 +15,20 @@ A Groth16 verifier implementation for Solana using BN254 precompiles. This crate
 
 ## Installation
 
-Add `groth16-solana` to your `Cargo.toml`:
+Add `sp1-solana` to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-groth16-solana = { git = "https://github.com/succinctlabs/groth16-solana" }
+sp1-solana = { git = "https://github.com/succinctlabs/sp1-solana" }
 ```
+
+If your crate isn't running as a solana contract, you can optionally enable the `sp1-serialize` feature. 
+This allows an [`SP1ProofWithPublicValues`](https://docs.rs/sp1-sdk/2.0.0/sp1_sdk/proof/struct.SP1ProofWithPublicValues.html)
+to be serialized into a `SP1ProofFixture`. 
+
+## Usage
+
+See the [example](./example/README.md) for a full example.
 
 ## Acknowledgements
 This crate uses the [`groth16-solana`](https://github.com/Lightprotocol/groth16-solana/) crate from Light Protocol Labs for the actual Groth16 proof verification, and the [`ark-bn254`](https://github.com/arkworks-rs/algebra) crate for the elliptic curve operations.
