@@ -1,0 +1,22 @@
+name: PR
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+  
+
+jobs:
+  script-test:
+    name: Script Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Run script tests
+        run: |
+          cd example/script
+          cargo test --release
